@@ -1,0 +1,19 @@
+### Mainpage
+GET http://192.168.1.110:8383
+
+### Dashboard
+GET http://192.168.1.110:8383/dashboard
+
+### api/data
+GET http://192.168.1.110:8383/api/data
+
+### POST api/data
+POST http://192.168.1.110:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "Mutlucan"
+}
+
+### DELETE api/data
+DELETE http://192.168.1.110:8383/api/data
