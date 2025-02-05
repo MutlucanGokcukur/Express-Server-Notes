@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from "url";
 import authRoutes from './routes/authRoutes.js';
 import todoRoutes from './routes/todoRoutes.js';
+import authMiddleware from "./middleware/authMiddleware.js";
 //#endregion
 
 //#region app and PORT implementation
@@ -26,7 +27,7 @@ app.get('/', (req, res) =>
 });
 
 app.use('/auth', authRoutes);
-app.use('/todos', todoRoutes);
+app.use('/todos', authMiddleware, todoRoutes);
 
 app.listen(PORT,() =>
 {

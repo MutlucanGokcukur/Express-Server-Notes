@@ -1,6 +1,6 @@
 import Database from 'better-sqlite3';
 
-const db = new Database('./chapter_2.db');
+const db = new Database(':memory:');
 
 db.prepare(`
     CREATE TABLE IF NOT EXISTS users (

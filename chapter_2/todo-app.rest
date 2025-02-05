@@ -6,8 +6,8 @@ POST http://192.168.1.110:3000/auth/register
 Content-Type: application/json
 
 {
-    "username": "test",
-    "password": "test123"
+    "username": "mutsuz@gmail.com",
+    "password": "mutsuz1234"
 }
 
 ### Login a user POST /auth/login
@@ -15,6 +15,34 @@ POST http://192.168.1.110:3000/auth/login
 Content-Type: application/json
 
 {
-    "username": "test",
-    "password": "test123"
+    "username": "mutsuz@gmail.com",
+    "password": "mutsuz1234"
 }
+
+
+### Fetch all todos GET /todos (protected)
+GET http://192.168.1.110:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NzU1NjYyLCJleHAiOjE3Mzg4NDIwNjJ9.yV1swOXEO4itzSF6f0KxaDqLXiO1FXi3jwcvZcS2DU0
+
+
+### Create a new todo POST /todos (protected)
+POST http://192.168.1.110:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NzU1NjYyLCJleHAiOjE3Mzg4NDIwNjJ9.yV1swOXEO4itzSF6f0KxaDqLXiO1FXi3jwcvZcS2DU0
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
+
+### Update a todo PUT /todos/:id (protected)
+PUT http://192.168.1.110:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NzU1NjYyLCJleHAiOjE3Mzg4NDIwNjJ9.yV1swOXEO4itzSF6f0KxaDqLXiO1FXi3jwcvZcS2DU0
+Content-Type: application/json
+
+{
+    "completed":1
+}
+
+### Delete a todo DELETE /todos/:id (protected)
+DELETE http://192.168.1.110:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NzU1NjYyLCJleHAiOjE3Mzg4NDIwNjJ9.yV1swOXEO4itzSF6f0KxaDqLXiO1FXi3jwcvZcS2DU0
