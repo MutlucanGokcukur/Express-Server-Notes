@@ -1,0 +1,33 @@
+{
+    "name": "notepad_app",
+    "version": "1.0.0",
+    "description": "Basic Notepad Backend Application With Express",
+    "main": "./src/server.js",
+    "scripts": 
+    {
+        "dev": "nodemon --loader esm-module-alias/loader --no-warnings --legacy-watch ./src/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "date-fns": "^4.1.0",
+        "dotenv": "^16.4.7",
+        "esm-module-alias": "^2.2.1",
+        "express": "^4.21.2",
+        "mysql2": "^3.12.0",
+        "nodemon": "^3.1.9",
+        "sequelize": "^6.37.5"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/sequelize": "^4.28.20",
+        "sequelize-cli": "^6.6.2"
+    },
+    "aliases": {
+        "@root": "./src"
+    }
+}
