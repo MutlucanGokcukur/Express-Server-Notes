@@ -6,6 +6,7 @@
     "scripts": 
     {
         "dev": "nodemon --loader esm-module-alias/loader --no-warnings --legacy-watch ./src/server.js",
+        "start": "node --loader esm-module-alias/loader ./src/server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
 
